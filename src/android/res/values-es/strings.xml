@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="connecting">Connectando...</string>
+  <string name="err_disconnect_printer">Error desconectando impresora</string>
+  <string name="err_fetch_st">Error al obtener estado</string>
+  <string name="err_fetch_tmp">Error al obtener la temperatura</string>
+  <string name="err_lines_number">El número de líneas debe estar entre 0 y 255</string>
+  <string name="err_no_bt_adapter">Adaptador Bluetooth no disponible</string>
+  <string name="err_no_bt_device">No se encontró ningún dispositivo Bluetooth</string>
+  <string name="err_feed_paper">Error al cargar papel a la impresora</string>
+  <string name="err_print">Error al imprimir</string>
+  <string name="err_print_barcode">Error al imprimir código de barras</string>
+  <string name="err_print_img">Error al imprimir la imagen</string>
+  <string name="err_print_rect">Error al imprimir el rectángulo</string>
+  <string name="err_print_test">Error al imprimir la página de prueba</string>
+  <string name="err_set_barcode">Error al establecer la configuración del código de barras</string>
+  <string name="err_bt_socket">No se pudo crear el socket Bluetooth</string>
+  <string name="err_write">No se pudieron escribir estos bytes en esta impresora</string>
+  <string name="failed_to_connect">No se pudo conectar: </string>
+  <string name="failed_to_comm">No se pudo crear la comunicación</string>
+  <string name="failed_to_initialize">No se pudo inicializar: </string>
+  <string name="low_battery">Bateria baja</string>
+  <string name="no_paper">No hay papel</string>
+  <string name="overheating">Calentamiento excesivo</string>
+  <string name="paper_ok">Papel ok</string>
+  <string name="printer">Impresora</string>
+  <string name="printer_connected">Impresora conectada</string>
+  <string name="printer_disconnected">Impresora desconectada</string>
+  <string name="err_print_qrcode">Error imprimiendo QRcode</string>
+  <string name="err_set_debug">Error estableciendo modo debug</string>
+</resources>

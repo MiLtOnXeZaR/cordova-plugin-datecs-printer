@@ -116,6 +116,7 @@ public class DatecsSDKWrapper {
         this.errorCode.put(20, DatecsUtil.getStringFromStringResource(app, "failed_to_initialize"));
         this.errorCode.put(21, DatecsUtil.getStringFromStringResource(app, "err_write"));
         this.errorCode.put(22, DatecsUtil.getStringFromStringResource(app, "err_print_qrcode"));
+        this.errorCode.put(23, DatecsUtil.getStringFromStringResource(app, "err_set_debug"))
     }
 
     private JSONObject getErrorByCode(int code) {
@@ -360,9 +361,9 @@ public class DatecsSDKWrapper {
         mProtocolAdapter = new ProtocolAdapter(inputStream, outputStream);
         if (mProtocolAdapter.isProtocolEnabled()) {
             mProtocolAdapter.setPrinterListener(mChannelListener);
-            
+
             final ProtocolAdapter.Channel channel = mProtocolAdapter.getChannel(ProtocolAdapter.CHANNEL_PRINTER);
-            
+
             mPrinter = new Printer(channel.getInputStream(), channel.getOutputStream());
         } else {
             mPrinter = new Printer(mProtocolAdapter.getRawInputStream(), mProtocolAdapter.getRawOutputStream());
@@ -696,12 +697,22 @@ public class DatecsSDKWrapper {
 
         LocalBroadcastManager.getInstance(mWebView.getContext()).sendBroadcastSync(intent);
     }
-    
+
     private void sendStatusUpdate(boolean isConnected, boolean hasPaper) {
         this.sendStatusUpdate(isConnected, hasPaper, false);
     }
 
     private void sendStatusUpdate(boolean isConnected) {
         this.sendStatusUpdate(isConnected, true, false);
+    }
+
+    public void setDebug(boolean sDebug) {
+        try {
+
+            mPrinter.setDebug(sDebug);
+            mCallbackContext.success();
+        } catch (Exception e) {
+            mCallbackContext.error(this.getErrorByCode(23, e));
+        }
     }
 }

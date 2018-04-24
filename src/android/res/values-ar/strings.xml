@@ -27,4 +27,5 @@
   <string name="printer_connected">الطابعة متصلة</string>
   <string name="printer_disconnected">الطابعة غير متصلة</string>
   <string name="err_print_qrcode">خطأ طباعة كركود</string>
+  <string name="err_set_debug"></string>
 </resources>
