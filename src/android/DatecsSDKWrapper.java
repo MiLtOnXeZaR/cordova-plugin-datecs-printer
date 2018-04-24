@@ -116,7 +116,7 @@ public class DatecsSDKWrapper {
         this.errorCode.put(20, DatecsUtil.getStringFromStringResource(app, "failed_to_initialize"));
         this.errorCode.put(21, DatecsUtil.getStringFromStringResource(app, "err_write"));
         this.errorCode.put(22, DatecsUtil.getStringFromStringResource(app, "err_print_qrcode"));
-        this.errorCode.put(23, DatecsUtil.getStringFromStringResource(app, "err_set_debug"))
+        this.errorCode.put(23, DatecsUtil.getStringFromStringResource(app, "err_set_debug"));
     }
 
     private JSONObject getErrorByCode(int code) {
